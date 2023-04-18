@@ -6,10 +6,10 @@ import utilStyles from "../../styles/utils.module.css";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
 interface Props {
-  slug: string
+  slug: string;
 }
 
-export async function getStaticProps({ params } : {params : Props}) {
+export async function getStaticProps({ params }: { params: Props }) {
   const postData = await getPostData(params.slug, "posts");
   return {
     props: {

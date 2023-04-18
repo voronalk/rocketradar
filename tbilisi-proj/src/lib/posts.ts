@@ -6,7 +6,7 @@ import html from "remark-html";
 
 const articlesDirectory = path.join(process.cwd(), "articles");
 
-export function getSortedPostsData(folder : string) {
+export function getSortedPostsData(folder: string) {
   const postsDirectory = path.join(articlesDirectory, folder);
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
@@ -67,18 +67,25 @@ export async function getPostData(slug: string, folder: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
+  try {
+    const matterResult = matter(fileContents);
+    // Use remark to convert markdown into HTML string
+    const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content);
+    const contentHtml = processedContent.toString();
 
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
-
-  // Combine the data with the slug and contentHtml
-  return {
-    slug,
-    contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
-  };
+    // Combine the data with the slug and contentHtml
+    return {
+      slug,
+      contentHtml,
+      ...(matterResult.data as { date: string; title: string }),
+    };
+  } catch {
+    console.log("nope");
+    return {
+      slug,
+      contentHtml: "nothing yet",
+    };
+  }
 }

@@ -46,6 +46,7 @@ export default function Layout({
         </Link>
       </header>
       <main className={styles.main}>{children}</main>
+      <footer>This website is currently under develpment, many features may not work as intended</footer>
     </div>
   );
 }
