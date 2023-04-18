@@ -1,0 +1,123 @@
+.heading2Xl {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingXl {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingLg {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.headingMd {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.borderCircle {
+  border-radius: 9999px;
+}
+
+.colorInherit {
+  color: inherit;
+}
+
+.padding1px {
+  padding-top: 1px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  margin: 0 0 1.25rem;
+}
+
+.lightText {
+  color: #F0F0F5;
+  /* color: #666; */
+}
+
+.flexInline{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.rocketContainter {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  height: 20rem;
+  margin-top: 2rem;
+  /* background-color: #D4AF37; */
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.rocketsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: black !important;
+}
+
+.rocketPic {
+  width: 100%;
+  height: 100%;
+  /* box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3); */
+}
+
+.rocketPic:is(:hover, :focus) {
+  box-shadow: 3px 3px 3px #D4AF37;
+}
+
+.missionLink {
+  width: 15rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  margin-top: 2rem;
+  /* align-items: center; */
+  /* border: 1px solid bla; */
+  /* border-radius: 5px; */
+}
+
+.missionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .rocketsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .rocketContainter {
+    margin-top: 2rem;
+    width: 7rem;
+    height: 14rem;
+  }
+}
+
+

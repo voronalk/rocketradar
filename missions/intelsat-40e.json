@@ -1,0 +1,52 @@
+{
+  "id": 645,
+  "cospar_id": "",
+  "sort_date": "1680842340",
+  "name": "Intelsat-40e",
+  "provider": { "id": 1, "name": "SpaceX", "slug": "spacex" },
+  "vehicle": {
+    "id": 1,
+    "name": "Falcon 9",
+    "company_id": 1,
+    "slug": "falcon-9"
+  },
+  "pad": {
+    "id": 3,
+    "name": "SLC-40",
+    "location": {
+      "id": 62,
+      "name": "Cape Canaveral SFS",
+      "state": "FL",
+      "statename": "Florida",
+      "country": "United States",
+      "slug": "cape-canaveral-sfs"
+    }
+  },
+  "missions": [
+    { "id": 673, "name": "Intelsat-40e", "description": null },
+    { "id": 5046, "name": "TEMPO", "description": null }
+  ],
+  "mission_description": null,
+  "launch_description": "A SpaceX Falcon 9 rocket will launch the Intelsat-40e mission on Friday, April 7, 2023 at 4:39 AM (UTC).",
+  "win_open": null,
+  "t0": "2023-04-07T04:39Z",
+  "win_close": null,
+  "est_date": { "month": 4, "day": 7, "year": 2023, "quarter": null },
+  "date_str": "Apr 07",
+  "tags": [
+    { "id": 117, "text": "B1076" },
+    { "id": 24, "text": "Communications Satellite" }
+  ],
+  "slug": "intelsat-40e",
+  "weather_summary": null,
+  "weather_temp": null,
+  "weather_condition": null,
+  "weather_wind_mph": null,
+  "weather_icon": null,
+  "weather_updated": null,
+  "quicktext": "Falcon 9 - Intelsat-40e - Apr 07 (estimated) - https://rocketlaunch.live/launch/intelsat-40e for info/stream",
+  "media": [],
+  "result": -1,
+  "suborbital": false,
+  "modified": "2023-03-29T00:31:48+00:00"
+}
