@@ -1,7 +1,7 @@
 import styles from "./missionSummary.module.css";
 import Link from "next/link";
 import { Launch } from "@/lib/interface";
-import DateTime, {dateFormats} from "../date";
+import DateTime, { dateFormats } from "../date";
 
 export default function MissionSummary({
   children,
@@ -14,7 +14,7 @@ export default function MissionSummary({
     <div className={styles.container}>
       <p>Launch name: {launch.name}</p>
       <p>
-        Provider :{" "}
+        Provider:{" "}
         <Link href={`/providers/${launch.provider.slug}`}>
           {launch.provider.name}
         </Link>
@@ -34,7 +34,11 @@ export default function MissionSummary({
         <p>State: {launch.pad.location.statename} </p>
       ) : null}
       <p>
-        Date: <DateTime seconds={parseInt(launch.sort_date)} dateFormat={dateFormats.missionSummary}></DateTime>
+        Date:{" "}
+        <DateTime
+          seconds={parseInt(launch.sort_date)}
+          dateFormat={dateFormats.missionSummary}
+        ></DateTime>
       </p>
       <div>{children}</div>
     </div>
