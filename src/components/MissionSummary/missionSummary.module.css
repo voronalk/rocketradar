@@ -17,9 +17,9 @@
   align-items: center;
 }
 
-.backToHome {
+/* .backToHome {
   margin: 3rem 0 0;
-}
+} */
 
 @media only screen and (max-width: 600px) {
   .container {

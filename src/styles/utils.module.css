@@ -48,11 +48,11 @@
 }
 
 .lightText {
-  color: #F0F0F5;
+  color: #f0f0f5;
   /* color: #666; */
 }
 
-.flexInline{
+.flexInline {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -66,7 +66,7 @@
   width: 10rem;
   height: 20rem;
   margin-top: 2rem;
-  /* background-color: #D4AF37; */
+  /* background-color: #d4af37; */
   align-items: center;
   justify-content: flex-end;
 }
@@ -75,7 +75,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  color: black !important;
+  /* color: black !important; */
 }
 
 .rocketPic {
@@ -84,17 +84,18 @@
   /* box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3); */
 }
 
-.rocketPic:is(:hover, :focus) {
-  box-shadow: 3px 3px 3px #D4AF37;
+.rocketPic:is(:hover, :focus, :focus-visible) {
+  box-shadow: 3px 3px 3px #d4af37;
 }
 
 .missionLink {
   width: 15rem;
+  padding: 1rem;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
   margin-top: 2rem;
   /* align-items: center; */
   /* border: 1px solid bla; */
-  /* border-radius: 5px; */
+  border-radius: 20%;
 }
 
 .missionContainer {
@@ -102,7 +103,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 
 @media only screen and (max-width: 600px) {
   .rocketsContainer {
@@ -112,12 +112,10 @@
     justify-content: space-around;
     align-items: center;
   }
-  
+
   .rocketContainter {
     margin-top: 2rem;
     width: 7rem;
     height: 14rem;
   }
 }
-
-

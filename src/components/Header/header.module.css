@@ -1,0 +1,86 @@
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 4rem;
+  background-color: #0f0f1a;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.menu {
+  position: fixed;
+  width: 200px;
+  height: calc(100vh - 4rem);
+  top: 4rem;
+  background-color: #0f0f1a;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.menuOpenIcon {
+  position: absolute;
+  filter: invert();
+  top: calc(2rem - 25px);
+  left: 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.menuOpenIcon.open {
+  left: 75px;
+}
+
+.headerButton {
+  background-color: #0f0f1a;
+  color: inherit;
+  border-radius: 5px;
+  height: 3rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.headerButton:is(:hover, :focus-visible) {
+  background-color: #d4af37;
+  color: black;
+}
+
+.headerButton:active {
+  background-color: #f0cd5b;
+  border: 1px solid #0f0f1a;
+}
+
+@media (min-width: 600px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu {
+    background-color: transparent;
+    position: static;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateX(0);
+    height: auto;
+    flex-grow: 1;
+  }
+  .menuOpenIcon {
+    display: none;
+  }
+  .headerButton {
+    margin-bottom: 0;
+  }
+}

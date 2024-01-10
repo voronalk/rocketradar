@@ -9,7 +9,7 @@ interface Props {
   slug: string;
 }
 
-export async function getStaticProps({ params } : {params : Props}) {
+export async function getStaticProps({ params }: { params: Props }) {
   const postData = await getPostData(params.slug, "rockets");
   return {
     props: {

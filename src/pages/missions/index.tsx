@@ -24,8 +24,7 @@ export async function getStaticProps() {
   };
 }
 
-
-export default function Post({ response } : Props) {
+export default function Post({ response }: Props) {
   return (
     <Layout>
       <Head>
@@ -35,9 +34,17 @@ export default function Post({ response } : Props) {
         <article>
           {/* <h1 className={utilStyles.headingXl}>{launch.name}</h1> */}
           <div className={utilStyles.missionContainer}>
-          {response.map(({params}) => {
-            return <Link key={params.slug} href={`/missions/${params.slug}`}className={utilStyles.missionLink}>{params.slug}</Link>
-          })}
+            {response.map(({ params }) => {
+              return (
+                <Link
+                  key={params.slug}
+                  href={`/missions/${params.slug}`}
+                  className={utilStyles.missionLink}
+                >
+                  {params.slug}
+                </Link>
+              );
+            })}
           </div>
         </article>
         {/* <MissionSummary launch={launch}></MissionSummary> */}

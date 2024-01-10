@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Image from "next/image";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
+import Head from "next/head";
 import Link from "next/link";
+import Header from "@/components/Header/header";
+import Footer from "@/components/Footer/footer";
 
 const name = "Willy Wonka";
 export const siteTitle = "Rocket Radar";
@@ -31,22 +31,10 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        <Link href={"/"} className={styles.headerButton}>
-          <div >Home</div>
-        </Link>
-        <Link href={"/missions"} className={styles.headerButton}>
-          <div >Missions</div>
-        </Link>
-        <Link href={"/rockets"} className={styles.headerButton}>
-          <div >Rockets</div>
-        </Link>
-        <Link href={"/providers"} className={styles.headerButton}>
-          <div >Providers</div>
-        </Link>
-      </header>
+      <Header></Header>
+      <div className={styles.stars}></div>
       <main className={styles.main}>{children}</main>
-      <footer><h3>This website is currently under develpment, many features may not work as intended</h3></footer>
+      <Footer></Footer>
     </div>
   );
 }
