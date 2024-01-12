@@ -58,4 +58,5 @@
   margin-top: 100px;
   flex: 1 0 auto;
   margin-bottom: 200px;
+  z-index: 1;
 }
