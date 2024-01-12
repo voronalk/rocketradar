@@ -8,26 +8,42 @@ import CloseMenuIcon from "../../../public/close-svgrepo-com.svg";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className={styles.header}>
       <Image
         className={`${styles.menuOpenIcon} ${isOpen ? styles.open : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleMenu}
         src={isOpen ? CloseMenuIcon : MenuIcon}
         alt="menu"
         width={50}
       />
       <nav className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
-        <Link href={"/"} className={styles.headerButton}>
+        <Link href={"/"} className={styles.headerButton} onClick={toggleMenu}>
           Home
         </Link>
-        <Link href={"/missions"} className={styles.headerButton}>
+        <Link
+          href={"/missions"}
+          className={styles.headerButton}
+          onClick={toggleMenu}
+        >
           Missions
         </Link>
-        <Link href={"/rockets"} className={styles.headerButton}>
+        <Link
+          href={"/rockets"}
+          className={styles.headerButton}
+          onClick={toggleMenu}
+        >
           Rockets
         </Link>
-        <Link href={"/providers"} className={styles.headerButton}>
+        <Link
+          href={"/providers"}
+          className={styles.headerButton}
+          onClick={toggleMenu}
+        >
           Providers
         </Link>
       </nav>
